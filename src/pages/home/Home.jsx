@@ -15,7 +15,7 @@ const Home = () => {
         <div className={styles.buttons_con}>
           <Link><img src="" alt="" /></Link>
           <Link><img src="" alt="" /></Link>
-          <p>Vores ture</p><span>pil</span>
+          <p>Vores ture</p><span>&rarr;</span>
         </div>
       </div>
       <div className={styles.about_wrapper}>

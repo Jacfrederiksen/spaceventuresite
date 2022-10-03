@@ -12,3 +12,16 @@ export const getBanner = () => {
 
     return responce;
 }
+
+export const getFooter = () => {
+    
+    let responce = axiosBase.get('/footer/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}
