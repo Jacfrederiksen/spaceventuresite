@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./navigation.scss";
 import { NavLink, Link } from "react-router-dom";
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram } from 'react-icons/fa'
 
 const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -25,9 +26,9 @@ const Navigation = () => {
         </div>
         <div className="navigation_top_right">
           <div className="navigation_dot_con">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
+            <span className="dot"></span>
           </div>
         </div>
       </div>
@@ -35,25 +36,19 @@ const Navigation = () => {
         <div
           className={showMenu ? "navigation_links active" : "navigation_links"}>
           <ul>
-            <li>
-              <NavLink to="/">Hjem</NavLink>
-            </li>
-            <li>
-              <NavLink to="/shuttle">Rumfærgen</NavLink>
-            </li>
-            <li>
-              <NavLink to="/trips">Ture</NavLink>
-            </li>
-            <li>
-              <NavLink to="/gallery">Galleri</NavLink>
-            </li>
-            <li>
-              <NavLink to="/safety">Sikkerhed</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact">Kontakt</NavLink>
-            </li>
+            <li><NavLink to="/">Hjem</NavLink></li>
+            <li><NavLink to="/shuttle">Rumfærgen</NavLink></li>
+            <li><NavLink to="/trips">Ture</NavLink></li>
+            <li><NavLink to="/gallery">Galleri</NavLink></li>
+            <li><NavLink to="/safety">Sikkerhed</NavLink></li>
+            <li><NavLink to="/contact">Kontakt</NavLink></li>
           </ul>
+        </div>
+        <div className="social_icons_con">
+          <FaFacebookF size="20px" className="f_icon" />
+          <FaTwitter size="20px" className="f_icon" />
+          <FaGooglePlusG size="20px" className="f_icon" />
+          <FaTwitter size="20px" className="f_icon" />
         </div>
       </div>
     </nav>

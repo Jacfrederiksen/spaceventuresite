@@ -5,6 +5,13 @@ $white: #FEFEFEff;
 $prussian-blue: #11263Aff;
 $prussian-blue-2: #162E44ff;
 
+// Flex center mixin
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 // Mobil mixin
 $Mwidth: 800px;

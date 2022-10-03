@@ -1,1 +1,33 @@
 @import "./../../global.scss";
+
+.home_wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.1fr 1fr 1fr 1fr;
+
+    .buttons_wrapper{
+        grid-column: 1/-1;
+        grid-row: 2/3;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.about_wrapper{
+    grid-column: 1/-1 ;
+    grid-row: 3/4 ;
+}
+
+.team_wrapper{
+    grid-column: 1/-1;
+    grid-row: 4/5;
+}
+
+.signup_wrapper{
+    height: 500px;
+    grid-column: 1/-1;
+    grid-row: 5/-1;
+    background-color: bisque;
+}
