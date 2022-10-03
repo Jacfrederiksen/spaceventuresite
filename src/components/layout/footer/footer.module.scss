@@ -9,6 +9,38 @@
         grid-row: 1fr;
         padding: 0px 10%;
         height: 400px;
+
+        h3{
+            color: $white;
+        }
+
+        .contact_con{
+            height: 200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            color: $light-sea-green;
+            margin-top: 90px;
+
+            div{
+                display: flex;
+                align-items: center;
+
+                p{
+                    padding-left: 20px;
+                    color: $white;
+                }
+            }
+
+        }
+
+        .links_con{
+            margin-top: 90px;
+            height: 200px;
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr 1fr ;
+        }
     }
 
     .footer_bot{
