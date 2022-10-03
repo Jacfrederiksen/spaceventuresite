@@ -16,7 +16,7 @@ import AdminHome from './admin/pages/home/AdminHome'
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element ={<Home />}/>

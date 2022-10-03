@@ -17,24 +17,23 @@ const Navigation = () => {
             <span className="line lineTwo"></span>
             <span className="line lineThree"></span>
           </div>
-          <div className="navigation_top_center">
-            <Link to="/">
-              <img src="" alt="" />
-            </Link>
-          </div>
-          <div className="navigation_top_right">
-            <div className="navigation_dot_con">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
+        </div>
+        <div className="navigation_top_center">
+          <Link to="/">
+            <img src="assets/img/logo.png" alt="" />
+          </Link>
+        </div>
+        <div className="navigation_top_right">
+          <div className="navigation_dot_con">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
           </div>
         </div>
       </div>
       <div className="navigation_bottom">
         <div
-          className={showMenu ? "navigation_links active" : "navigation_links"}
-        >
+          className={showMenu ? "navigation_links active" : "navigation_links"}>
           <ul>
             <li>
               <NavLink to="/">Hjem</NavLink>
