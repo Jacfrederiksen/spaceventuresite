@@ -1,0 +1,12 @@
+.home_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+
+    .home_wrapper_con{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}

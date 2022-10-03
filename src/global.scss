@@ -1,7 +1,16 @@
-$width: 800px;
+// Farver
+$black-coral: #586775ff;
+$light-sea-green: #01B3A7ff;
+$white: #FEFEFEff;
+$prussian-blue: #11263Aff;
+$prussian-blue-2: #162E44ff;
+
+
+// Mobil mixin
+$Mwidth: 800px;
 
 @mixin mobile {
-    @media (max-width: #{$width}) {
+    @media (max-width: #{$Mwidth}) {
         @content
     }
 }
