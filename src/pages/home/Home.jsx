@@ -11,7 +11,7 @@ const Home = () => {
     <>
     <div className={styles.home_wrapper}>
       <Slider />
-      <div className={styles.buttons_wrapper}>
+      <section className={styles.buttons_wrapper}>
         <div className={styles.buttons_con}>
           <Link>
             <div className={styles.planets_con}>
@@ -30,16 +30,21 @@ const Home = () => {
             <span>&rarr;</span>
           </div>
         </div>
-      </div>
-      <div className={styles.about_wrapper}>
+      </section>
+      <section className={styles.about_wrapper}>
         <About />
-      </div>
-      <div className={styles.team_wrapper}>
+      </section>
+      <section className={styles.team_wrapper}>
         <Team />
-      </div>
-      <div className={styles.signup_wrapper}>
-        <div className={styles.signup_con}></div>
-      </div>
+      </section>
+      <section className={styles.signup_wrapper}>
+        <div className={styles.signup_con}>
+          <div className={styles.image_con}><img src="assets/img/newsmail-bg.jpg" alt="" /></div>
+          <div className={styles.signup_image_con}>
+            <img src="assets/img/newsmail-bg.jpg" alt="" />
+          </div>
+        </div>
+      </section>
     </div>
     </>
   )

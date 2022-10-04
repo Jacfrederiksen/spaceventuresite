@@ -12,6 +12,24 @@
 
     .about_text_con {
 
+      .hr_con{
+        display: flex;
+
+        hr:nth-of-type(1){
+          background-color: $light-sea-green;
+          height: 5px;
+          width: 50%;
+          border: none;
+        }
+
+        hr:nth-of-type(2){
+          width: 50%;
+          height: 4px;
+          border: none;
+          background-color: rgb(220, 220, 220);
+          margin-top: 1px;
+        }
+      }
 
       button {
         width: 145px;

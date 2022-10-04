@@ -37,7 +37,7 @@ const About = () => {
         <div className={styles.about_text_con}>
           <h2>Lidt om os</h2>
           <h3>{about.title}</h3>
-          <hr />
+          <div className={styles.hr_con}><hr /><hr /></div>
           <article>{parse(about.content)}</article>
           <button>Kontakt os</button>
         </div>

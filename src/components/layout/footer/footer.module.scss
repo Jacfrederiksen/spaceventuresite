@@ -6,7 +6,7 @@
   .footer_top {
     display: grid;
     grid-template-columns: 2fr 0.8fr;
-    grid-row: 1fr;
+    grid-template-rows: 1fr;
     padding: 0px 10%;
     height: 400px;
 
@@ -87,7 +87,7 @@
   .footer_bot {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row: 1fr;
+    grid-template-rows: 1fr;
     background-color: $prussian-blue;
     padding: 0px 0 0 10%;
     height: 100px;
