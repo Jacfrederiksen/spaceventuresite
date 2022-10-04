@@ -4,6 +4,7 @@ import { getFooter } from '../../../helpers/getCall';
 import { FaPhoneAlt, } from 'react-icons/fa'
 import { HiMail } from 'react-icons/hi'
 import { TiLocationArrow } from 'react-icons/ti'
+import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
@@ -54,22 +55,42 @@ const Footer = () => {
           <h3>HURTIG LINKS</h3>
           <nav>
             <ul>
-              <Link><li>Rumfærgen</li></Link>
-              <Link><li>Ture</li></Link>
-              <Link><li>Vores Team</li></Link>
-              <Link><li>Galleri</li></Link>
-              <Link><li>Sikkerhed</li></Link>
+              <div>
+                <span className={styles.dot}></span>
+                <Link><li>Rumfærgen</li></Link>
+              </div>
+              <div>
+                <span className={styles.dot}></span>
+                <Link><li>Ture</li></Link>
+              </div>
+              <div>
+                <span className={styles.dot}></span>
+                <Link><li>Vores Team</li></Link>
+              </div>
+              <div>
+                <span className={styles.dot}></span>
+                <Link><li>Galleri</li></Link>
+              </div>
+              <div>
+                <span className={styles.dot}></span>
+                <Link><li>Sikkerhed</li></Link>
+              </div>
             </ul>
           </nav>
-          <button>Kontakt</button>
+          <button className={styles.contact_button}>Kontakt</button>
         </div>
       </div>
       }
       <div className={styles.footer_bot}>
         <div className={styles.copy_con}>
-          <p></p>
+          <p>@ 2021 Space Venture. All rights reserved.</p>
         </div>
-        <div className={styles.icon_con}></div>
+        <div className={styles.icon_con}>
+          <FaFacebookF size="20px" className={styles.f_icon} />
+          <FaTwitter size="20px" className={styles.f_icon} />
+          <FaGooglePlusG size="20px" className={styles.f_icon} />
+          <FaTwitter size="20px" className={styles.f_icon} />
+        </div>
         <div className={styles.to_top}>
           <button className={styles.to_top}><p>&#8963;</p></button>
         </div>

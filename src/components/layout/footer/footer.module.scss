@@ -1,84 +1,142 @@
 @import "./../../../global.scss";
 
-.footer_con{
-    background-color: $prussian-blue-2;
+.footer_con {
+  background-color: $prussian-blue-2;
 
-    .footer_top{
+  .footer_top {
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+    grid-row: 1fr;
+    padding: 0px 10%;
+    height: 400px;
+
+    h3 {
+      color: $white;
+    }
+
+    .contact_con {
+      height: 180px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr fr 1fr 1fr;
+      color: $light-sea-green;
+      margin-top: 90px;
+
+      div {
+        display: flex;
+        align-items: center;
+
+        p {
+          padding-left: 20px;
+          color: $white;
+        }
+      }
+    }
+
+    .links_con {
+      margin-top: 90px;
+      height: 200px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      row-gap: 20px;
+
+      ul {
         display: grid;
-        grid-template-columns: 1fr 0.8fr;
-        grid-row: 1fr;
-        padding: 0px 10%;
-        height: 400px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        list-style: none;
+        row-gap: 15px;
+        column-gap: 10px;
 
-        h3{
+        div {
+          display: flex;
+          align-items: center;
+
+          .dot {
+            background-color: $light-sea-green;
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px ;
+          }
+
+          li {
             color: $white;
+          }
         }
+      }
 
-        .contact_con{
-            height: 200px;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr;
-            color: $light-sea-green;
-            margin-top: 90px;
+      .contact_button {
+        width: 130px;
+        height: 70px;
+        border: none;
+        color: $white;
+        background-color: $light-sea-green;
+        cursor: pointer;
+        transition: all 0.2s ease;
 
-            div{
-                display: flex;
-                align-items: center;
-
-                p{
-                    padding-left: 20px;
-                    color: $white;
-                }
-            }
-
+        &:hover {
+          background-color: $black-coral;
         }
+      }
+    }
+  }
 
-        .links_con{
-            margin-top: 90px;
-            height: 200px;
-            display: grid;
-            grid-template-columns: 1fr ;
-            grid-template-rows: 1fr 1fr 1fr ;
-        }
+  .footer_bot {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: 1fr;
+    background-color: $prussian-blue;
+    padding: 0px 0 0 10%;
+    height: 100px;
+
+    .copy_con {
+      display: flex;
+      align-items: center;
+      color: $black-coral;
     }
 
-    .footer_bot{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-row: 1fr;
-        background-color: $prussian-blue;
-        padding: 0px 0 0 10%;
-        height: 100px;
+    .icon_con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-right: 200px;
 
-        .copy_con{
+      .f_icon {
+        margin: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        color: $black-coral;
 
+        &:hover {
+          color: $light-sea-green;
         }
-
-        .icon_con{
-
-        }
-
-        .to_top{
-            display: flex;
-            justify-content: flex-end;
-            margin: 3px 15px;
-
-            button{
-                @include flexCenter;
-                width: 50px;
-                height: 50px;
-                background-color: $light-sea-green;
-                border: none;
-                color: white;
-                cursor: pointer;
-
-                p{
-                    padding-top: 12px;
-                    font-size: 1.5rem;
-                    font-weight: 900;
-                }
-            }
-        }
+      }
     }
+
+    .to_top {
+      display: flex;
+      justify-content: flex-end;
+      margin: 3px 15px;
+
+      button {
+        @include flexCenter;
+        width: 50px;
+        height: 50px;
+        background-color: $light-sea-green;
+        border: none;
+        color: white;
+        cursor: pointer;
+
+        p {
+          padding-top: 12px;
+          font-size: 1.5rem;
+          font-weight: 900;
+        }
+      }
+    }
+  }
 }
