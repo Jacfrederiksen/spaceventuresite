@@ -1,5 +1,26 @@
-@import './../../global.scss';
+@import "./../../global.scss";
 
-.about_wrapper{
+.about_wrapper {
+  @include flexCenter;
+  padding: 0px 10%;
+  background-color: $white;
+  height: 600px;
 
+  .about_con {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .about_text_con {
+
+
+      button {
+        width: 145px;
+        height: 52px;
+        background-color: $light-sea-green;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
 }

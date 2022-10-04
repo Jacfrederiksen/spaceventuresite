@@ -25,3 +25,29 @@ export const getFooter = () => {
 
     return responce;
 }
+
+export const getAbout = () => {
+    
+    let responce = axiosBase.get('/about/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}
+
+export const getTeam = () => {
+    
+    let responce = axiosBase.get('/team/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}

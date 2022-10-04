@@ -1,6 +1,27 @@
 @import './../../global.scss';
 
-.team_con{
-    height: 500px;
-    background-color: aqua;
+.team_wrapper{
+    height: 600px;
+    padding: 0px 10%;
+    background-color: $white;
+
+    .team_con{
+
+        h2{
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .team_gallery{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px 10px;
+
+            .card_con{
+                height: 350px;
+                width: 100%;
+                background-color: $light-sea-green;
+            }
+        }
+    }
 }

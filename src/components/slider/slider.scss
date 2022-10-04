@@ -26,27 +26,27 @@
       opacity: 1;
     }
   }
-}
 
-.dot {
-  cursor: pointer;
-  height: 4px;
-  width: 40px;
-  margin: 0 2px;
-  background-color: rgb(230, 230, 230);
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+  .dot_container {
+    position: absolute;
+    right: 100px;
+    top: 250px;
+    text-align: center;
+    z-index: 10;
 
-.dot_container {
-  position: absolute;
-  bottom: 15px;
-  right: 0;
-  left: 0;
-  text-align: center;
+    .dot {
+      display: flex;
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 13px;
+      background-color: $white;
+      transition: background-color 0.3s ease;
+    }
 
-  .active,
-  .dot:hover {
-    background-color: #777777;
+    .active,
+    .dot:hover {
+      background-color: $light-sea-green;
+    }
   }
 }

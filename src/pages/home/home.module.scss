@@ -3,16 +3,14 @@
 .home_wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1.1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.8fr 1fr 1fr 1fr 1fr;
   background-color: $lightGray;
 
   .buttons_wrapper {
     grid-column: 1/-1;
     grid-row: 2/3;
     z-index: 5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexCenter;
     
 
     .buttons_con {
@@ -30,7 +28,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.2fr;
-	    overflow: hidden;
+	      overflow: hidden;
 
         img {
           grid-column: 1/-1;
