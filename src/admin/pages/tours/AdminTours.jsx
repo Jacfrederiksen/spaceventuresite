@@ -67,14 +67,13 @@ const AdminTours = () => {
       error && <Errorcomp beskedtest="Fejlbesked" />
       }
       {
-        tours && <div>
+        tours && <div className={styles.card_con}>
 
           {
             tours.map(t => 
             <div className={styles.card} key={t._id}>
               <p>{t.title}</p>
-              <p>{t.teaser}</p>
-              <AiOutlineDelete color="red" size={"30px"} onClick={() => handleDelete(t._id)}/>
+              <AiOutlineDelete className={styles.delete} color="red" size={"30px"} onClick={() => handleDelete(t._id)}/>
               <Link to={"/admin/admintoursedit/" + t._id}><AiOutlineEdit color="green" size={"30px"}/></Link>
             </div>
             )

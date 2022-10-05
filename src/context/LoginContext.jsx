@@ -9,7 +9,7 @@ const LoginContextProvider = (props) => {
 
     // Login-funktion (matcher brugernavn og password)
     let signIn = (username, password) => {
-        if (username === "admin" && password === "999") {
+        if (username === "admin" && password === "komind") {
             setUser(username)
         } else {
             setUser(null);

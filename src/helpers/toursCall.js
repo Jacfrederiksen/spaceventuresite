@@ -31,7 +31,7 @@ export const getTourById = (id) => {
 // POST / TILFØJ
 export const createTour = ( newTour ) => {
 
-    let responce = axiosBase.post('/tours/admin', newTour)
+    let responce = axiosBase.post('/tours/admin/', newTour)
         .then(
             res => {return res.data}
         )

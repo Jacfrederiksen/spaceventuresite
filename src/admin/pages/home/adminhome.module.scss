@@ -1,12 +1,26 @@
 .home_wrapper{
     display: flex;
-    align-items: center;
-    max-width: 800px;
+    flex-direction: column;
     padding: 0px 10%;
+    height: 80vh;
 
-    .home_wrapper_con{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    .home_welcome{
+        
+        
+        h1{
+         padding: 30px 0 10px 0;
+        }
+
+        p{
+            padding-bottom: 30px;
+        }
+    }
+
+    .home_subs{
+        padding-bottom: 20px;
+        
+        p{
+            padding: 8px 0;
+        }
     }
 }

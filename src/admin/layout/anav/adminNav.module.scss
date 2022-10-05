@@ -22,12 +22,17 @@
     }
 
     button{
-        margin-left: 50px;
+        margin-left: 90px;
         height: 30px;
         width: 100px;
-        background-color: rgb(219, 219, 219);
-        color: rgb(0, 0, 0);
+        background-color: $light-sea-green;
+        color: $white;
         border: none;
         cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: $black-coral;
+        }
     }
 }

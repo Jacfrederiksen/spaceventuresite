@@ -80,6 +80,10 @@ const Slider = () => {
                 src={"http://localhost:4444/images/banner/" + s.image}
                 className="s_images"
               />
+              <div className="slider_text_con">
+                  <h2>{s.title}</h2>
+                  <h1>{s.content}</h1>
+              </div>
             </div>
           ))}
           <div className="dot_container">

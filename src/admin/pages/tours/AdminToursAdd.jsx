@@ -61,41 +61,34 @@ const AdminToursAdd = () => {
         error && <Errorcomp />
       }
       <form onSubmit={ handleSubmit }>
-        <label htmlFor="title">Title</label>
-        <input type="text" name="title" required />
-        <label htmlFor="teaser">Teaser description</label>
-        <textarea name="teaser" className={styles.teasertxt} id="" cols="40" rows="5" required></textarea>
+      <label htmlFor="title">Title</label>
+        <input type="text" name="title" required  />
         <label htmlFor="content">Description</label>
         <CKEditor 
               editor={Editor}
-              data = { editorContent }
+              data={editorContent}
               onChange = {(event, e) => {
                 setEditorContent(e.getData())
               }}
-            />
-        <textarea name="content" id="" cols="40" rows="10" required defaultValue={ editorContent }></textarea>
-        <label htmlFor="roomtype">Room Type</label>
-        <CKEditor 
-              editor={Editor}
-              data = { editorRoomtype }
-              onChange = {(event, e) => {
-                setEditorRoomtype(e.getData())
+              onReady={ (e) => {
+                setEditorContent (e.getData())
               }}
+              
             />
-        <textarea name="roomtype" id="" cols="40" rows="5" required defaultValue={ editorRoomtype }></textarea>
-        <label htmlFor="traveldate">Date</label>
-        <input type="date" name="traveldate" required onChange={ e => new Date (e.target.value) < new Date() ? alert("Vælg en dato der er senere end dags dato") : null} />
-        <label htmlFor="duration">Duration</label>
-        <input type="number" name="duration" min="1" max="360" required />
-        <label htmlFor="priceminimum">Price min</label>
-        <input type="number" name="priceminimum" required />
-        <label htmlFor="pricemaximum">Price max</label>
-        <input type="number" name="pricemaximum" required />
-        <button type="submit">Add new tour</button>
-        <label htmlFor="coverimage" required></label>
-        <input className={styles.file} type="file" name="image" id="" required />
-        <label htmlFor="galleryimages" required></label>
-        <input className={styles.file} type="file" name="galleryimages" id="" multiple required />
+        <textarea name="content" id="" cols="40" rows="10" defaultValue={editorContent}></textarea>
+        <label htmlFor="traveltime">Travel Time</label>
+        <input type="text" name="traveltime" min="1" max="360" required />
+        <label htmlFor="destination">Destination</label>
+        <input type="text" name="destination" required />
+        <label htmlFor="distance">Distance</label>
+        <input type="text" name="distance" required />
+        <label htmlFor="price">Price</label>
+        <input type="text" name="price" required />
+        <label htmlFor="image1" required></label>
+        <input className={styles.file} type="file" name="image1" id="" />
+        <label htmlFor="image2" required></label>
+        <input className={styles.file} type="file" name="image2" id="" />
+        <button type="submit">Save tour</button>
       </form>
     </div>
   );

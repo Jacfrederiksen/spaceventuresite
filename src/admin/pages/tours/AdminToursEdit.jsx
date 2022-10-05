@@ -47,7 +47,6 @@ const AdminToursEdit = (props) => {
   const handleSubmit = (e) => {
 
     e.preventDefault();
-    //Kald api og post ny tour
 
     setLoading(true)
 
@@ -55,12 +54,8 @@ const AdminToursEdit = (props) => {
 
     editTour(updateTour, tourID)
     .then((data) => {
-        setMessage("Tur er rettet")
+        setMessage("Turen er rettet")
         setError(false)
-        // TODO: hvad skal der ske når tour er rettet?
-/*         e.target.reset()  // TØM FORMULAREN
-        setEditorContent("")  // TØM STATE, FOR AT TØMME CK EDITOR
-        setEditorRoomtype("") // TØM STATE, FOR AT TØMME CK EDITOR */
     })
     .catch((err) => {
         console.log(err)
@@ -77,7 +72,7 @@ const AdminToursEdit = (props) => {
     <div className={styles.addTour_con}>
       <h1>Edit Tour</h1>
       {
-        message && <Popup title="Tour er rettet" content={message} setMessage={setMessage} />
+        message && <Popup title="Touren er rettet" content={message} setMessage={setMessage} />
       }
       {
         loading && <Loadingcomp />
@@ -89,8 +84,6 @@ const AdminToursEdit = (props) => {
       <form onSubmit={ handleSubmit }>
         <label htmlFor="title">Title</label>
         <input type="text" name="title" required defaultValue={tour.title} />
-        <label htmlFor="teaser">Teaser description</label>
-        <textarea name="teaser" className={styles.teasertxt} id="" cols="40" rows="5" required defaultValue={tour.teaser}></textarea>
         <label htmlFor="content">Description</label>
         <CKEditor 
               editor={Editor}
@@ -104,34 +97,20 @@ const AdminToursEdit = (props) => {
               
             />
         <textarea name="content" id="" cols="40" rows="10" defaultValue={ editorContent }></textarea>
-        <label htmlFor="roomtype">Room Type</label>
-        <CKEditor 
-              editor={Editor}
-              data = { tour.roomtype }
-              onChange = {(event, e) => {
-                setEditorRoomtype(e.getData())
-              }}
-              onReady={ (e) => {
-                setEditorRoomtype (e.getData())
-              }}
-            />
-        <textarea name="roomtype" id="" cols="40" rows="5" defaultValue={ editorRoomtype }></textarea>
-        <label htmlFor="traveldate">Date</label>
-        <input type="date" name="traveldate" 
-          defaultValue={ new Date( tour.traveldate ).toLocaleDateString( "fr-CA" )}
-          min={ new Date().toLocaleDateString( "fr-CA")} 
-          required 
-          onChange={ e => new Date (e.target.value) < new Date() ? alert("Vælg en dato der er senere end dags dato") : null} />
-        <label htmlFor="duration">Duration</label>
-        <input type="number" name="duration" defaultValue={tour.duration} min="1" max="360" required />
-        <label htmlFor="priceminimum">Price min</label>
-        <input type="number" name="priceminimum" defaultValue={tour.priceminimum} required />
-        <label htmlFor="pricemaximum">Price max</label>
-        <input type="number" name="pricemaximum" defaultValue={tour.pricemaximum} required />
-        <label htmlFor="image" required></label>
-        <input className={styles.file} type="file" name="image" id="" />
-        <div className={styles.coverphoto_con}><p>Present coverphoto</p> <img src={"http://localhost:5099/images/tours/" + tour.coverimage} alt="" /></div>
-        {/* Image2 kopi af den ovenover */}
+        <label htmlFor="traveltime">Travel Time</label>
+        <input type="text" name="traveltime" defaultValue={tour.traveltime} min="1" max="360" required />
+        <label htmlFor="destination">Destination</label>
+        <input type="text" name="destination" defaultValue={tour.destination} required />
+        <label htmlFor="distance">Distance</label>
+        <input type="text" name="distance" defaultValue={tour.distance} required />
+        <label htmlFor="price">Price</label>
+        <input type="text" name="price" defaultValue={tour.price} required />
+        <label htmlFor="image1" required></label>
+        <input className={styles.file} type="file" name="image1" id="" />
+        <div className={styles.coverphoto_con}><p>Image 1</p> <img src={"http://localhost:4444/images/tours/" + tour.image1} alt="" /></div>
+        <label htmlFor="image2" required></label>
+        <input className={styles.file} type="file" name="image2" id="" />
+        <div className={styles.coverphoto_con}><p>Image 2</p> <img src={"http://localhost:4444/images/tours/" + tour.image2} alt="" /></div>
         <button type="submit">Save edit</button>
       </form>
       }

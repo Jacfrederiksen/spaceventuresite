@@ -4,6 +4,7 @@ import Slider from '../../components/slider/Slider'
 import { Link } from "react-router-dom";
 import About from '../../components/about/About';
 import Team from '../../components/team/Team';
+import Subs from '../../components/subs/Subs';
 
 const Home = () => {
 
@@ -38,12 +39,7 @@ const Home = () => {
         <Team />
       </section>
       <section className={styles.signup_wrapper}>
-        <div className={styles.signup_con}>
-          <div className={styles.image_con}><img src="assets/img/newsmail-bg.jpg" alt="" /></div>
-          <div className={styles.signup_image_con}>
-            <img src="assets/img/newsmail-bg.jpg" alt="" />
-          </div>
-        </div>
+        <Subs />
       </section>
     </div>
     </>
