@@ -7,18 +7,30 @@
     display: grid;
     grid-template-columns: 2fr 0.8fr;
     grid-template-rows: 1fr;
-    padding: 0px 10%;
+    padding: 0px 200px;
     height: 400px;
+
+    @include mobile{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: auto;
+      padding: 0;
+    }
 
     h3 {
       color: $white;
+
+      @include mobile{
+        text-align: center;
+      }
     }
 
     .contact_con {
       height: 180px;
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
       color: $light-sea-green;
       margin-top: 90px;
 
@@ -26,6 +38,10 @@
         display: flex;
         align-items: center;
 
+        @include mobile{
+          padding-top: 10px;
+        }
+      
         p {
           padding-left: 20px;
           color: $white;
@@ -41,6 +57,12 @@
       grid-template-rows: 1fr 1fr 1fr;
       row-gap: 20px;
 
+      @include mobile{
+        row-gap: 0;
+        grid-template-rows: 0.4fr 1fr 1fr;
+        height: 300px;
+      }
+
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -49,9 +71,18 @@
         row-gap: 15px;
         column-gap: 10px;
 
+        @include mobile{
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+
         div {
           display: flex;
           align-items: center;
+          
+          @include mobile{
+            justify-content: center;
+          }
 
           .dot {
             background-color: $light-sea-green;
@@ -68,19 +99,30 @@
         }
       }
 
-      .contact_button {
-        width: 130px;
-        height: 70px;
-        border: none;
-        color: $white;
-        background-color: $light-sea-green;
-        cursor: pointer;
-        transition: all 0.2s ease;
+      .button_con{
 
-        &:hover {
-          background-color: $black-coral;
+        .contact_button {
+          width: 130px;
+          height: 70px;
+          border: none;
+          color: $white;
+          background-color: $light-sea-green;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+
+          &:hover {
+            background-color: $black-coral;
+          }
+        }
+
+        @include mobile{
+          display: flex;
+          justify-content: center;
+          padding: 0px 0px 20px 0px;
         }
       }
+      
     }
   }
 
@@ -91,6 +133,10 @@
     background-color: $prussian-blue;
     padding: 0px 0 0 10%;
     height: 100px;
+
+    @include mobile{
+      display: none;
+    }
 
     .copy_con {
       display: flex;

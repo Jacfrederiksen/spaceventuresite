@@ -1,1 +1,59 @@
-@import './../../global.scss'
+@import "./../../global.scss";
+
+.tour_card_con {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border: 0.5px solid rgb(220, 220, 220);
+
+  .tour_img_con {
+
+    img {
+      width: 600px;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .tour_content_con {
+
+    .price_con {
+      position: absolute;
+      right: 0;
+      top:0;
+      @include flexCenter;
+      width: 100px;
+      height: 50px;
+      background-color: $light-sea-green;
+      background: linear-gradient(45deg, transparent 7px, $light-sea-green 7px);
+
+      h6 {
+        color: $white;
+      }
+    }
+
+    .text_con {
+      padding: 50px;
+
+      h2 {
+      }
+
+      p {
+      }
+
+      button {
+        width: 170px;
+        height: 60px;
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: $prussian-blue;
+          color: $white;
+        }
+      }
+    }
+  }
+}

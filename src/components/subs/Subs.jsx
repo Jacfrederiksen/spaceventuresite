@@ -51,14 +51,14 @@ const Subs = () => {
                 error && <Errorcomp/>
             }
             {
-                signUp && <h4>Du er ny tilmeldt!</h4>
+                signUp && <h4>Du er nu tilmeldt!</h4>
             }
             {
                 !signUp &&
 
                 <form onSubmit={handleSub}>
                     <label htmlFor="email"></label>
-                    <input type="email" name="email" placeholder="Din email" required></input>
+                    <input type="email" name="email" placeholder="Din E-mail" required></input>
                     <button type="submit">Tilmeld</button>
                 </form>
             }

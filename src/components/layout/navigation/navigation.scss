@@ -17,7 +17,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 0px 10%;
+    padding: 0px 200px;
 
     @include mobile{
       padding: 0 15px;
@@ -116,6 +116,7 @@
     background-color: $prussian-blue-2;
     height: 60px;
     padding: 0px 10%;
+    
 
     @include mobile {
       display: flex;
@@ -127,6 +128,7 @@
       display: flex;
       justify-content: center;
       transition: all 1s ease;
+      z-index: 10;
       
 
       @include mobile {

@@ -76,7 +76,10 @@ const Footer = () => {
               </div>
             </ul>
           </nav>
-          <button className={styles.contact_button}>Kontakt</button>
+          <div className={styles.button_con}>
+            <button className={styles.contact_button}>Kontakt</button>
+          </div>
+          
         </div>
       </div>
       }

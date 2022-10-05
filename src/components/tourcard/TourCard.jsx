@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './tourcard.module.scss'
 import { Link } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 const TourCard = (props) => {
 
@@ -9,15 +10,15 @@ const TourCard = (props) => {
   return (
     <div className={styles.tour_card_con}>
         <div className={styles.tour_img_con}>
-            <img src="" alt="" />
+            <img src={"http://localhost:4444/images/tours/" + t.image1} alt="" />
         </div>
         <div className={styles.tour_content_con}>
             <div className={styles.price_con}>
-                <h6></h6>
+                <h6>{t.price}</h6>
             </div>
             <div className={styles.text_con}>
                 <h2>{t.title}</h2>
-                <p></p>
+                <p>{parse(t.content)}</p>
                 <Link to={"/trip/" + t._id}><button>Se mere</button></Link>
             </div>
         </div>
