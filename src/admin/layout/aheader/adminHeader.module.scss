@@ -1,0 +1,21 @@
+@import './../../../global.scss';
+
+.admin_header_con{
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    height: 60px;
+    padding: 0px 10%;
+
+    .header_top{
+        padding-top: 10px;
+        
+        img{
+           width: 230px; 
+        }
+    }
+
+    h1{
+        padding: 50px;
+    }
+}

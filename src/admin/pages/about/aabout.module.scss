@@ -1,0 +1,68 @@
+.about_con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+
+    input {
+      border-radius: 3px;
+      border: gray 0.5px solid;
+      margin-bottom: 10px;
+      height: 30px;
+      padding-left: 8px;
+    }
+
+    label{
+        margin-top: 10px;
+    }
+
+    .file {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    textarea {
+      display: none;
+      border: gray 1px solid;
+      resize: vertical;
+      padding: 8px 0px 0px 8px;
+      margin-bottom: 10px;
+    }
+
+    .image_con {
+      margin: 15px 0px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    button {
+      padding: 10px;
+      width: 150px;
+      border: none;
+      background-color: green;
+      color: white;
+      border-radius: 3px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkolivegreen;
+    }
+
+    .message_con{
+        margin: 15px 0px;
+        font-size: 1.1rem;
+    }
+
+  }
+}

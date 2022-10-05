@@ -1,0 +1,13 @@
+@import './../../global.scss';
+
+.nomatch_con{
+    @include flexCenter;
+    margin: 100px 10%;
+    background-color: $light-sea-green;
+
+    h1{
+        background-color: $light-sea-green;
+        color: $white;
+        padding: 200px 0;
+    }
+}

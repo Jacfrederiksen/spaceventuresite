@@ -1,0 +1,38 @@
+.login_con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+
+    form{
+        background-color: rgb(255, 127, 127);
+        padding: 100px;
+
+        input{
+            height: 50px;
+            margin: 0 20px;
+            padding: 3px;
+        }
+
+        label{
+            font-size: 1.3rem;
+        }
+
+        button{
+            height: 50px;
+            width: 100px;
+            background-color: rgb(47, 47, 47);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: rgb(71, 71, 71);
+        }
+
+
+    }
+}

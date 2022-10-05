@@ -1,0 +1,51 @@
+.popup_bg_overlay {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 8;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.2);
+	pointer-events: all;
+
+	.popup {
+		position: fixed;
+		z-index: 10;
+		width: 500px;
+		max-width: 80%;
+		padding: 10px 15px;
+		border: 1px solid rgb(176, 184, 176);
+		border-radius: 10px;
+		background-color: rgb(227, 250, 230);
+		color: black;
+	
+		.header {
+			display: flex;
+			justify-content: space-between;
+			padding: 5px 0;
+			align-items: center;
+			border-bottom: 1px dashed rgb(176, 184, 176);
+		}
+	
+		.title {
+			font-size: 1.25rem;
+			font-weight: bold;
+		}
+	
+		.close {
+			cursor: pointer;
+			border: none;
+			outline: none;
+			background: none;
+			font-size: 1.25rem;
+			font-weight: bold;
+		}
+	
+		.body {
+			padding: 10px 0;
+		}
+	}
+}

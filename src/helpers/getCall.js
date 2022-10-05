@@ -51,3 +51,16 @@ export const getTeam = () => {
 
     return responce;
 }
+
+export const getSubs = () => {
+    
+    let responce = axiosBase.get('/newssubscription/admin/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}
