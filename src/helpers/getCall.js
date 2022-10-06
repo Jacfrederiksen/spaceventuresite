@@ -77,3 +77,16 @@ export const getGallery = () => {
 
     return responce;
 }
+
+export const getSafety = () => {
+    
+    let responce = axiosBase.get('/safety/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}
