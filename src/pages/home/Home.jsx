@@ -11,7 +11,9 @@ const Home = () => {
   return (
     <>
     <div className={styles.home_wrapper}>
-      <Slider />
+      <section className={styles.slider_wrapper}>
+       <Slider /> 
+      </section>
       <section className={styles.buttons_wrapper}>
         <div className={styles.buttons_con}>
           <Link>

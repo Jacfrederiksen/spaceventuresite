@@ -30,15 +30,15 @@ const Trips = () => {
   }, []);
 
   return (
-    <div className={styles.tours_con}>
-      <div className={styles.tours_header_con}>
-        <img src="" alt="" />
-        <h1></h1>
+    <div className={styles.trips_con}>
+      <div className={styles.trips_header_con}>
+        <img src="assets/img/banner-ture.jpg" alt="" />
+        <h1>Ture</h1>
       </div>
       { loading && <p>Loader</p> }
       { error && <p>Error</p>}
       {tours && 
-        <div className={styles.tour_card_con}>
+        <div className={styles.trips_card_con}>
             {
             tours.map((t => 
               <TourCard tour={t} key={t._id} />
