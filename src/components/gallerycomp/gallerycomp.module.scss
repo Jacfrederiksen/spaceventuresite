@@ -1,0 +1,16 @@
+@import "./../../global.scss";
+
+.gallery_con{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+    img{
+       @include mobile{
+        margin-top: 10px;
+        } 
+    }
+
+    
+}

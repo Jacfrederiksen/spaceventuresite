@@ -131,4 +131,16 @@
       }
     }
   }
+
+  .gallery_wrapper{
+    
+    h2{
+        text-align: center;
+        font-size: 2rem;
+
+        @include mobile{
+          padding-top: 30px;
+        }
+    }
+  }
 }

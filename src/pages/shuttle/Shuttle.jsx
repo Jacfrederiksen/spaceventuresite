@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./shuttle.module.scss";
 import { getSpacecraft } from "../../helpers/getCall";
 import parse from "html-react-parser";
+import GalleryComp from "../../components/gallerycomp/GalleryComp";
 
 const Shuttle = () => {
   const [spacecraft, setSpacecraft] = useState();
@@ -52,6 +53,7 @@ const Shuttle = () => {
       )}
       <div className={styles.gallery_wrapper}>
         <h2>Galleri</h2>
+        <GalleryComp />
       </div>
     </div>
   );
