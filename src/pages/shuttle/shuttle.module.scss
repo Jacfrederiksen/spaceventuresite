@@ -8,6 +8,19 @@
       width: 100%;
       height: 370px;
       object-fit: cover;
+      animation-name: move;
+      animation-duration: 30s;
+      object-position: center;
+      
+    
+      @keyframes move {
+        0% {
+          object-position: bottom;
+        }
+        100% {
+          object-position: center;
+        }
+      }
 
       @include mobile {
         height: 180px;
