@@ -127,18 +127,18 @@
     .navigation_links {
       display: flex;
       justify-content: center;
-      transition: all 1s ease;
-      z-index: 10;
+      transition: all 0.4s ease-in;
+      z-index: 11;
       
-
       @include mobile {
+        align-items: center;
         width: 100%;
         overflow: hidden;
         height: 0;
         background-color: $prussian-blue-2;
 
         &.active {
-          height: 300px;
+          height: 100vh;
         }
       }
 
@@ -151,6 +151,7 @@
         align-items: center;
 
         @include mobile {
+          gap: 2.5rem;
           width: 100%;
           flex-direction: column;
         }
@@ -169,6 +170,7 @@
 
           @include mobile {
             text-align: center;
+            font-size: 1.5rem;
           }
         }
 

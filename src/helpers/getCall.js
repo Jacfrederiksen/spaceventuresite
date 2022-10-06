@@ -51,3 +51,29 @@ export const getTeam = () => {
 
     return responce;
 }
+
+export const getSpacecraft = () => {
+    
+    let responce = axiosBase.get('/spacecraft/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}
+
+export const getGallery = () => {
+    
+    let responce = axiosBase.get('/gallery/')
+    .then(
+        res => {return res.data}
+    )
+    .catch ( error => {
+        return null;
+    })
+
+    return responce;
+}

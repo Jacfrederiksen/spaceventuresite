@@ -35,8 +35,8 @@ const Navigation = () => {
       <div className="navigation_bottom">
         <div
           className={showMenu ? "navigation_links active" : "navigation_links"}>
-          <ul>
-            <li><NavLink to="/">Hjem</NavLink></li>
+          <ul onClick={() => setShowMenu(!showMenu)}>
+            <li><NavLink to="/"end>Hjem</NavLink></li>
             <li><NavLink to="/shuttle">Rumfærgen</NavLink></li>
             <li><NavLink to="/trips">Ture</NavLink></li>
             <li><NavLink to="/gallery">Galleri</NavLink></li>
