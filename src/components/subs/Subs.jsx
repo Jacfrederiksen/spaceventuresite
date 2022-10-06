@@ -4,7 +4,7 @@ import Loading from './../loading/Loadingcomp'
 import Errorcomp from './../errorcomp/Errorcomp'
 
 // API
-import { subNews, unsubNews } from './../../helpers/subsCall'
+import { subNews } from './../../helpers/subsCall'
 
 const Subs = () => {
 
