@@ -27,7 +27,7 @@ const Gallery = () => {
         {
               galleryArray.map((i => 
                 <div className={styles.img_con} key={i}>
-                    <img src={i} alt="" />
+                    <img src={i} alt={"Space gallery image" + i} />
                 </div>
               ))
       }

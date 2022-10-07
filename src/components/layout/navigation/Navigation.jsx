@@ -7,7 +7,7 @@ const Navigation = () => {
   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className="navigation_con">
+    <nav className="navigation_con" id="nav">
       <div className="navigation_top">
         <div className="navigation_top_left">
           <div
@@ -21,7 +21,7 @@ const Navigation = () => {
         </div>
         <div className="navigation_top_center">
           <Link to="/">
-            <img src={process.env.PUBLIC_URL + "assets/img/logo.png"} alt="" />
+            <img src={process.env.PUBLIC_URL + "assets/img/logo.png"} alt="Space venture Logo" />
           </Link>
         </div>
         <div className="navigation_top_right">

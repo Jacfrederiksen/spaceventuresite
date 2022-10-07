@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./popup.module.scss";
 
-// Skal modtage title, content, setMessage (state i parent)
 const Popup = ( props ) => {
 
   return (

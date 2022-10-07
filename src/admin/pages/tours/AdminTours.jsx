@@ -1,10 +1,14 @@
 import styles from './admintours.module.scss';
 import React, { useEffect, useState } from "react";
-import { getTours, getTourById, createTour, editTour, deleteTour } from './../../../helpers/toursCall'
-import Loadingcomp from './../../../components/loading/Loadingcomp'
-import Errorcomp from './../../../components/errorcomp/Errorcomp'
 import { AiOutlineDelete, AiOutlineEdit} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+
+// Components
+import Loadingcomp from './../../../components/loading/Loadingcomp'
+import Errorcomp from './../../../components/errorcomp/Errorcomp'
+
+// API call
+import { getTours, deleteTour } from './../../../helpers/toursCall'
 
 const AdminTours = () => {
 
@@ -56,7 +60,7 @@ const AdminTours = () => {
 
   return (
     <div className={styles.tours_con}>
-      <div className={styles.tours_header_con}><h1>Tours</h1></div>
+      <div className={styles.header_con}><h1>Tours</h1></div>
 
       <Link to="/admin/admintoursadd">Opret ny tour</Link>
 
@@ -64,7 +68,7 @@ const AdminTours = () => {
       loading && <Loadingcomp/>
       }
       {
-      error && <Errorcomp beskedtest="Fejlbesked" />
+      error && <Errorcomp />
       }
       {
         tours && <div className={styles.card_con}>

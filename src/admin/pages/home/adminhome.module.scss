@@ -1,26 +1,32 @@
-.home_wrapper{
-    display: flex;
-    flex-direction: column;
-    padding: 0px 10%;
-    height: 80vh;
+.home_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10%;
 
-    .home_welcome{
-        
-        
-        h1{
-         padding: 30px 0 10px 0;
-        }
-
-        p{
-            padding-bottom: 30px;
-        }
+  .welcome_con {
+    h1 {
+      padding: 30px 0 10px 0;
     }
 
-    .home_subs{
-        padding-bottom: 20px;
-        
-        p{
-            padding: 8px 0;
-        }
+    p {
+      padding-bottom: 30px;
     }
+  }
+
+  .subs_con {
+    padding-bottom: 20px;
+
+    p {
+      padding: 8px 0;
+    }
+
+    .sub {
+      display: flex;
+      padding-bottom: 20px;
+
+      p {
+        padding-right: 10px;
+      }
+    }
+  }
 }

@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import styles from './trips.module.scss'
-import { getTours } from '../../helpers/toursCall'
-import TourCard from '../../components/tourcard/TourCard'
 
+// Components
+import TourCard from '../../components/tourcard/TourCard'
+import Loading from './../../components/loading/Loadingcomp'
+import Errorcomp from './../../components/errorcomp/Errorcomp'
+
+// API Call
+import { getTours } from '../../helpers/toursCall'
 
 const Trips = () => {
 
@@ -31,14 +36,14 @@ const Trips = () => {
 
   return (
     <div className={styles.trips_con}>
-      <div className={styles.trips_header_con}>
-        <img src="assets/img/banner-ture.jpg" alt="" />
+      <div className={styles.header_con}>
+        <img src="assets/img/banner-ture.jpg" alt="Image of earth seen from space" />
         <h1>Ture</h1>
       </div>
-      { loading && <p>Loader</p> }
-      { error && <p>Error</p>}
+      { loading && <Loading/> }
+      { error && <Errorcomp/>}
       {tours && 
-        <div className={styles.trips_card_con}>
+        <div className={styles.card_con}>
             {
             tours.map((t => 
               <TourCard tour={t} key={t._id} />
@@ -46,7 +51,6 @@ const Trips = () => {
             }
         </div>
       }
-        
     </div>
   )
 }

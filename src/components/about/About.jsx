@@ -1,7 +1,13 @@
 import React, { useState, useEffect} from 'react'
 import styles from './about.module.scss'
-import { getAbout } from '../../helpers/getCall'
 import parse from 'html-react-parser';
+
+// Components
+import Loading from './../loading/Loadingcomp'
+import Errorcomp from './../errorcomp/Errorcomp'
+
+// API call
+import { getAbout } from '../../helpers/getCall'
 
 const About = () => {
 
@@ -30,13 +36,13 @@ const About = () => {
 
   return (
     <div className={styles.about_wrapper}>
-      { loading && <p>Loader</p> }
-      { error && <p>Error</p>}
+      { loading && <Loading /> }
+      { error && <Errorcomp />}
       {about && <div className={styles.about_con}>
         <div className={styles.img_con}>
-          <img src="assets/img/om-os.jpg" alt="" />
+          <img src="assets/img/om-os.jpg" alt="Picture of earth seen from space" />
         </div>
-        <div className={styles.about_text_con}>
+        <div className={styles.text_con}>
           <h2>Lidt om os</h2>
           <h3>{about.title}</h3>
           <div className={styles.hr_con}><hr /><hr /></div>

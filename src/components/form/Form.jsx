@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import styles from './form.module.scss'
+
+// Components
 import Loading from './../loading/Loadingcomp'
 import Errorcomp from './../errorcomp/Errorcomp'
 
-//Api
+//API Call
 import { sendContact } from './../../helpers/formCall'
 
 const Form = () => {

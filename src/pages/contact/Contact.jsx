@@ -14,6 +14,7 @@ const Contact = () => {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          alt="Google map"
         ></iframe>
       </div>
       <div className={styles.info_con}>

@@ -22,3 +22,16 @@ export const subNews = (subdata) => {
 
     return responce;
 }
+
+export const deleteSub = (id) => {
+
+    let responce = axiosBase.delete('/newssubscription/admin/' + id)
+        .then(
+            res => {return res.data}
+        )
+        .catch ( error => {
+           throw new Error("Der er desværre opstået en fejl!")
+        })
+
+    return responce;
+}

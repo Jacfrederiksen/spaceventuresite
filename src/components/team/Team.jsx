@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import styles from './team.module.scss'
-import { getTeam } from '../../helpers/getCall'
+
+// Components
 import TeamCard from './TeamCard'
+import Loading from './../loading/Loadingcomp'
+import Errorcomp from './../errorcomp/Errorcomp'
+
+// Api call
+import { getTeam } from '../../helpers/getCall'
 
 const Team = () => {
 
@@ -29,12 +35,12 @@ const Team = () => {
 
   return (
     <div className={styles.team_con}>
-      { loading && <p>Loader</p> }
-      { error && <p>Error</p>}
-      {team && 
-        <div className={styles.team_card_con}>
+      { loading && <Loading/> }
+      { error && <Errorcomp/>}
+      { team && 
+        <div className={styles.card_con}>
           <h2>Vores team</h2>
-          <div className={styles.team_card_grid} >
+          <div className={styles.card_grid} >
             {
             team.map((t => 
               <TeamCard team={t} key={t._id} />

@@ -12,7 +12,7 @@ const Slider = () => {
   //Index til slides
   const [slideIndex, setSlideIndex] = useState(0); // Føste img har index 0
 
-  // T er til min timeout
+  // Timeout
   let t;
 
   useEffect(() => {
@@ -31,6 +31,7 @@ const Slider = () => {
         setLoading(false);
       });
   }, []);
+  
 
   useEffect(() => {
     if (banner) {
@@ -79,6 +80,7 @@ const Slider = () => {
               <img
                 src={"http://localhost:4444/images/banner/" + s.image}
                 className="s_images"
+                alt={"Image slideshow" + s.image}
               />
               <div className="slider_text_con">
                   <h2>{s.title}</h2>

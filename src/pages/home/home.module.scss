@@ -6,19 +6,19 @@
   grid-template-rows: 0.9fr 1fr 1fr 1fr 1fr;
   overflow: hidden;
 
-  @include mobile{
-   grid-template-rows: 0.5fr 0.5fr 0.6fr 1fr 0.4fr; 
+  @include mobile {
+    grid-template-rows: 0.5fr 0.5fr 0.6fr 1fr 0.4fr;
   }
-  
-  @include desk{
+
+  @include desk {
     grid-template-rows: 0.7fr 0.7fr 0.6fr 1fr 0.7fr;
   }
-  
-  @include pad{
+
+  @include pad {
     grid-template-rows: 0.35fr 0.4fr 0.6fr 1fr 0.4fr;
   }
-  
-  .slider_wrapper{
+
+  .slider_wrapper {
     grid-column: 1/-1;
     grid-row: 1/3;
   }
@@ -31,12 +31,11 @@
     grid-row: 2/3;
     background-color: $lightGray;
 
-    @include mobile{
+    @include mobile {
       display: flex;
       align-items: center;
       padding-top: 50px;
     }
-    
 
     .buttons_con {
       display: grid;
@@ -44,7 +43,7 @@
       grid-template-rows: 1fr 0.2fr;
       column-gap: 40px;
 
-      @include mobile{
+      @include mobile {
         grid-template-columns: 1fr;
         row-gap: 50px;
       }
@@ -89,7 +88,7 @@
         cursor: pointer;
         z-index: 5;
 
-        @include mobile{
+        @include mobile {
           padding-bottom: 50px;
         }
 

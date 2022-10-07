@@ -9,10 +9,10 @@ const TourCard = (props) => {
 
   return (
     <div className={styles.tour_card_con}>
-        <div className={styles.tour_img_con}>
-            <img src={"http://localhost:4444/images/tours/" + t.image1} alt="" />
+        <div className={styles.img_con}>
+            <img src={"http://localhost:4444/images/tours/" + t.image1} alt={"Image of the tour you can select" + t.image} />
         </div>
-        <div className={styles.tour_content_con}>
+        <div className={styles.content_con}>
             <div className={styles.price_con}>
                 <h6>{t.price}</h6>
             </div>

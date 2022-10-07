@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styles from "./trip.module.scss";
-import { getTourById } from "../../helpers/toursCall";
 import { useParams } from "react-router-dom";
 import parse from "html-react-parser";
 import {
@@ -9,6 +8,13 @@ import {
   FaGooglePlusG,
   FaInstagram,
 } from "react-icons/fa";
+
+// Components
+import Loading from './../../components/loading/Loadingcomp'
+import Errorcomp from './../../components/errorcomp/Errorcomp'
+
+// API call
+import { getTourById } from "../../helpers/toursCall";
 
 const Trip = (props) => {
   const [tour, setTour] = useState();
@@ -37,18 +43,18 @@ const Trip = (props) => {
 
   return (
     <div className={styles.trip_wrapper}>
-      {loading && <p>Loader</p>}
-      {error && <p>Error</p>}
+      {loading && <Loading/>}
+      {error && <Errorcomp/>}
       {tour && (
           <div className={styles.trip_con}>
             <div className={styles.img_con}>
               <img
                 src={"http://localhost:4444/images/tours/" + tour.image1}
-                alt=""
+                alt={"Image of the selected tour" + tour.image1}
               />
               <img
                 src={"http://localhost:4444/images/tours/" + tour.image2}
-                alt=""
+                alt={"Image of the selected tour" + tour.image2}
               />
             </div>
             <div className={styles.text_con}>

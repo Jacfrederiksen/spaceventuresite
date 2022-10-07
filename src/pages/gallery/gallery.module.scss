@@ -4,11 +4,11 @@
   margin: 50px 0px;
   padding: 50px 200px;
 
-  @include mobile{
+  @include mobile {
     padding: 30px 0px;
   }
 
-  @include pad{
+  @include pad {
     padding: 30px 0px;
   }
 
@@ -35,23 +35,22 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px 20px;
 
-    @include mobile{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
+    @include mobile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
 
-    @include pad{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+    @include pad {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
 
     .img_con {
       overflow: hidden;
       cursor: pointer;
-
 
       img {
         width: 300px;
@@ -62,7 +61,7 @@
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
 
-        @include pad{
+        @include pad {
           width: 500px;
           height: 500px;
         }

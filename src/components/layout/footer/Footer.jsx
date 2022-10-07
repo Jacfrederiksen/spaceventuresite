@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./footer.module.scss"
-import { getFooter } from '../../../helpers/getCall';
 import { FaPhoneAlt, } from 'react-icons/fa'
 import { HiMail } from 'react-icons/hi'
 import { TiLocationArrow } from 'react-icons/ti'
 import { FaFacebookF, FaTwitter, FaGooglePlusG, FaInstagram } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+
+// Components
+import Loading from './../../loading/Loadingcomp'
+import Errorcomp from './../../errorcomp/Errorcomp'
+
+// API Call
+import { getFooter } from '../../../helpers/getCall';
 
 const Footer = () => {
 
@@ -32,8 +38,8 @@ const Footer = () => {
 
   return (
     <div className={styles.footer_con}>
-      { loading && <p>Loader</p> }
-      { error && <p>Error</p>}
+      { loading && <Loading /> }
+      { error && <Errorcomp />}
       { footer && <div className={styles.footer_top}>
         <div className={styles.contact_con}>
           <h3>KONTAKT</h3>
@@ -94,7 +100,7 @@ const Footer = () => {
           <FaTwitter size="20px" className={styles.f_icon} />
         </div>
         <div className={styles.to_top}>
-          <button className={styles.to_top}><p>&#8963;</p></button>
+          <a href="#nav"><button className={styles.to_top}><p>&#8963;</p></button></a>
         </div>
       </div>
     </div>

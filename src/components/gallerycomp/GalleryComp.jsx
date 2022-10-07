@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { getGallery } from '../../helpers/getCall'
 import styles from './gallerycomp.module.scss'
+
+// Components
+import Loading from './../loading/Loadingcomp'
+import Errorcomp from './../errorcomp/Errorcomp'
+
+// API Call
+import { getGallery } from '../../helpers/getCall'
+
 
 const GalleryComp = () => {
 
@@ -28,12 +35,12 @@ const GalleryComp = () => {
   
     return (
       <div className={styles.gallery_con}>
-        { loading && <p>Loader</p> }
-        { error && <p>Error</p>}
-        {imgGallery && 
+        { loading && <Loading /> }
+        { error && <Errorcomp />}
+        { imgGallery && 
               imgGallery.map((g => 
                 <div className={styles.img_con} key={g._id}>
-                    <img src={"http://localhost:4444/images/gallery/" + g.image} alt="" />
+                    <img src={"http://localhost:4444/images/gallery/" + g.image} alt={"Gallery images" + g.image} />
                 </div>
               ))
               }

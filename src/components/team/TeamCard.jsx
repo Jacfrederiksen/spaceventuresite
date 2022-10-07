@@ -9,7 +9,7 @@ const TeamCard = (props) => {
     <div className={styles.card}>
       <div className={styles.card_top}>
         <div className={styles.img_con}>
-          <img src={"http://localhost:4444/images/team/" + t.image} alt="" />
+          <img src={"http://localhost:4444/images/team/" + t.image} alt="Team member image" />
         </div>
       </div>
       <div className={styles.card_bot}>

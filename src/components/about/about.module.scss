@@ -7,8 +7,8 @@
   background-color: $white;
   height: 600px;
 
-  @include mobile{
-   padding: 0;       
+  @include mobile {
+    padding: 0;
   }
 
   .about_con {
@@ -16,109 +16,104 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 80px;
 
-    .img_con{
-      
-      img{
-      object-fit: cover;
-      width: 100%;
-    }
+    .img_con {
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
     }
 
-    @include mobile{
+    @include mobile {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       row-gap: 30px;
     }
 
-    .about_text_con {
-
-
-      @include mobile{
-          padding: 0px 20px;
+    .text_con {
+      @include mobile {
+        padding: 0px 20px;
       }
 
-      h2{
+      h2 {
         font-size: 2.5rem;
-        padding: 20px 0 ;
+        padding: 20px 0;
 
-        @include mobile{
-         text-align: center;
+        @include mobile {
+          text-align: center;
         }
       }
 
-      h3{
+      h3 {
         font-size: 1.5rem;
         font-weight: 200;
         padding-bottom: 10px;
         color: $light-sea-green;
 
-        @include mobile{
-          text-align: center; 
+        @include mobile {
+          text-align: center;
           text-transform: uppercase;
         }
       }
 
-      article{
-
-        @include mobile{
+      article {
+        @include mobile {
           padding: 0 10px;
           text-align: center;
         }
       }
 
-      .hr_con{
+      .hr_con {
         display: flex;
         padding-bottom: 25px;
 
-        @include mobile{
+        @include mobile {
           justify-content: center;
         }
 
-        hr:nth-of-type(1){
+        hr:nth-of-type(1) {
           background-color: $light-sea-green;
           height: 5px;
           width: 45%;
           border: none;
 
-          @include mobile{
+          @include mobile {
             width: 85%;
             height: 1.5px;
           }
         }
 
-        hr:nth-of-type(2){
+        hr:nth-of-type(2) {
           width: 65%;
           height: 4px;
           border: none;
           background-color: rgb(220, 220, 220);
           margin-top: 1px;
 
-          @include mobile{
+          @include mobile {
             display: none;
           }
         }
       }
 
-      .button_con{
-
-        @include mobile{
-         display: flex;
-         justify-content: center; 
+      .button_con {
+        @include mobile {
+          display: flex;
+          justify-content: center;
         }
-      
-        button {
-                width: 145px;
-                height: 52px;
-                margin-top: 40px;
-                background-color: $light-sea-green;
-                border: none;
-                color: white;
-                cursor: pointer;
-                transition: all 0.2s ease;
 
-                &:hover {
-                  background-color: $black-coral;
-                }
+        button {
+          width: 145px;
+          height: 52px;
+          margin-top: 40px;
+          background-color: $light-sea-green;
+          border: none;
+          color: white;
+          cursor: pointer;
+          transition: all 0.2s ease;
+
+          &:hover {
+            background-color: $black-coral;
+          }
         }
       }
     }

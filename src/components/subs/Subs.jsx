@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from './subs.module.scss'
+
+// Components
 import Loading from './../loading/Loadingcomp'
 import Errorcomp from './../errorcomp/Errorcomp'
 
@@ -36,12 +38,12 @@ const Subs = () => {
   return (
     <div className={styles.signup_con}>
       <div className={styles.image_con}>
-        <img src="assets/img/newsmail-bg.jpg" alt="" />
+        <img src="assets/img/newsmail-bg.jpg" alt="Background image of the planet Mars" />
       </div>
-      <div className={styles.signup_image_con}>
-        <img src="assets/img/newsmail-bg.jpg" alt="" />
+      <div className={styles.overlay_image_con}>
+        <img src="assets/img/newsmail-bg.jpg" alt="Background image of the planet Mars overlay " />
       </div>
-      <div className={styles.signup_content_con}>
+      <div className={styles.content_con}>
             <h2>Tilmeld dig og få 25% rabat</h2>
             <p>Tilmeld dig vores nyhedsbrev of få 25% rabat på din første tur!</p>
             {

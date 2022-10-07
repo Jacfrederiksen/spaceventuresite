@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styles from "./shuttle.module.scss";
-import { getSpacecraft } from "../../helpers/getCall";
 import parse from "html-react-parser";
+
+// Components
 import GalleryComp from "../../components/gallerycomp/GalleryComp";
+import Loading from './../../components/loading/Loadingcomp'
+import Errorcomp from './../../components/errorcomp/Errorcomp'
+
+// API
+import { getSpacecraft } from "../../helpers/getCall";
 
 const Shuttle = () => {
   const [spacecraft, setSpacecraft] = useState();
@@ -30,17 +36,17 @@ const Shuttle = () => {
   return (
     <div className={styles.shuttle_con}>
       <div className={styles.shuttle_header_con}>
-        <img src="assets/img/banner-spaceship.jpg" alt="" />
+        <img src="assets/img/banner-spaceship.jpg" alt="Banner image of a spaceship" />
         <h1>Rumfærgen</h1>
       </div>
-      {loading && <p>Loader</p>}
-      {error && <p>Error</p>}
+      {loading && <Loading />}
+      {error && <Errorcomp />}
       {spacecraft && (
-        <div className={styles.shuttle_about_con}>
+        <div className={styles.about_con}>
           <div className={styles.img_con}>
-            <img src={"http://localhost:4444/images/spacecraft/" + spacecraft.image} alt="" />
+            <img src={"http://localhost:4444/images/spacecraft/" + spacecraft.image} alt="Image of earth seen from space" />
           </div>
-          <div className={styles.shuttle_text_con}>
+          <div className={styles.text_con}>
             <h2>Hvorfor vælge os</h2>
             <h3>{spacecraft.title}</h3>
             <div className={styles.hr_con}>
