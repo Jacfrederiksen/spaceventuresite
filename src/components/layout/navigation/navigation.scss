@@ -17,10 +17,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 0px 200px;
+    padding: $desktop;
 
     @include mobile{
       padding: 0 15px;
+    }
+
+    @include pad{
+      padding: $pad;
     }
 
     .navigation_top_left{
@@ -124,6 +128,10 @@
       padding: 0;
     }
 
+    @include pad{
+      padding: $pad;
+    }
+
     .navigation_links {
       display: flex;
       justify-content: center;
@@ -194,6 +202,10 @@
       width: 100%;
 
       @include mobile {
+        display: none;
+      }
+
+      @include pad{
         display: none;
       }
 

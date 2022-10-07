@@ -10,6 +10,10 @@
        @include mobile{
         margin-top: 10px;
         } 
+
+        @include pad{
+            width: 600px;
+        }
     }
 
     

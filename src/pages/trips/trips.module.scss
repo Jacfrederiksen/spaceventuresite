@@ -14,6 +14,11 @@
                 height: 180px;
                 object-position: left;
             }
+
+            @include pad{
+                height: 180px;
+                object-position: left;
+            }
         }
 
         h1{
@@ -32,6 +37,14 @@
         margin: 100px 200px;
 
         @include mobile{
+            margin: 50px 100px;
+        }
+
+        @include pad{
+            margin: 50px 30px;
+        }
+
+        @include desk{
             margin: 50px 100px;
         }
     }

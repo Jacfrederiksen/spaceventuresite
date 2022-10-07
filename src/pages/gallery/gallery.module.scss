@@ -8,6 +8,10 @@
     padding: 30px 0px;
   }
 
+  @include pad{
+    padding: 30px 0px;
+  }
+
   h1 {
     text-align: center;
     padding: 20px 0px;
@@ -38,6 +42,12 @@
         flex-direction: column;
       }
 
+    @include pad{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .img_con {
       overflow: hidden;
       cursor: pointer;
@@ -51,6 +61,11 @@
         transform: scale(1);
         -webkit-transition: 0.3s ease-in-out;
         transition: 0.3s ease-in-out;
+
+        @include pad{
+          width: 500px;
+          height: 500px;
+        }
 
         &:hover {
           -webkit-transform: scale(1.3);

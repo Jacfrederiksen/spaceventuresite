@@ -50,6 +50,12 @@
                 width: 100%;
             }
 
+            @include pad{
+                grid-column: 1/-1;
+                height: 50px;
+                width: 100%;
+            }
+
 
           &:hover {
             background-color: $black-coral;

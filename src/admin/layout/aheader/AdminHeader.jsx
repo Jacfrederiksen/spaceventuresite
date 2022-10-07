@@ -11,7 +11,7 @@ const AdminHeader = () => {
     <header className={styles.admin_header_con}>
       <div className={styles.header_top}>
           <Link to="/">
-            <img src="assets/img/logo.png" alt="" />
+            <img src={process.env.PUBLIC_URL + "/assets/img/logo.png"} alt="" />
           </Link>
         </div>
 {/*       <p>Du er nu logget ind som: {user} &nbsp;</p> */}

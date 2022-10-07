@@ -21,7 +21,7 @@ const Navigation = () => {
         </div>
         <div className="navigation_top_center">
           <Link to="/">
-            <img src="assets/img/logo.png" alt="" />
+            <img src={process.env.PUBLIC_URL + "assets/img/logo.png"} alt="" />
           </Link>
         </div>
         <div className="navigation_top_right">

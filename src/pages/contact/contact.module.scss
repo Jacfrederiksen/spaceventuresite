@@ -7,6 +7,10 @@
         margin: 50px 20px;
     }
 
+    @include pad{
+        margin: 50px 40px;
+      }
+
     .header_con{
         display: flex;
         justify-content: center;
@@ -42,12 +46,20 @@
             @include mobile{
                 padding: 0px 0px 10px 0px;
             }
+
+            @include pad{
+                padding: 0px 0px 10px 0px;
+              }
         }
 
         p{
             @include mobile{
                 text-align: center;
             }
+
+            @include pad{
+                text-align: center;
+              }
         }
 
     }

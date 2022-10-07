@@ -9,7 +9,15 @@
   @include mobile{
    grid-template-rows: 0.5fr 0.5fr 0.6fr 1fr 0.4fr; 
   }
-
+  
+  @include desk{
+    grid-template-rows: 0.7fr 0.7fr 0.6fr 1fr 0.7fr;
+  }
+  
+  @include pad{
+    grid-template-rows: 0.35fr 0.4fr 0.6fr 1fr 0.4fr;
+  }
+  
   .slider_wrapper{
     grid-column: 1/-1;
     grid-row: 1/3;

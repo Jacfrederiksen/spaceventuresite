@@ -6,6 +6,10 @@ $lightGray: rgb(242, 242, 242) ;
 $prussian-blue: #11263Aff;
 $prussian-blue-2: #162E44ff;
 
+// Padding Var
+$desktop:0px 200px;
+$pad:0px 50px;
+
 // Flex center mixin
 @mixin flexCenter{
     display: flex;
@@ -15,10 +19,24 @@ $prussian-blue-2: #162E44ff;
 
 
 // Mobil mixin
-$Mwidth: 800px;
+$Mwidth: 790px;
+$SDwidth: 1020px;
+
 
 @mixin mobile {
     @media (max-width: #{$Mwidth}) {
-        @content
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (min-width: #{$Mwidth}) and (max-width: #{$SDwidth}) {
+        @content;
+    }
+}
+
+@mixin desk {
+    @media (min-width: #{$SDwidth}) and (max-width: 1650px) {
+        @content;
     }
 }

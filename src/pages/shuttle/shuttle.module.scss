@@ -50,6 +50,15 @@
         width: 100%;
         }
 
+        @include pad {
+          flex-direction: column;
+          align-items: center;
+          margin: 0;
+          height: 50%;
+          width: 100%;
+          
+          }
+
     .img_con {
       width: 50%;
 
@@ -63,6 +72,11 @@
         width: 100%;
         padding: 50px 10px;
       }
+
+      @include pad{
+        width: 100%;
+        padding: 50px 10px;
+      }
     }
 
     .shuttle_text_con {
@@ -71,6 +85,12 @@
       @include mobile {
         height: 50%;
         width: 100%;
+      }
+
+      @include pad {
+        height: 50%;
+        width: 100%;
+        padding: 0px 20px;
       }
 
       h2 {
@@ -83,6 +103,10 @@
           text-align: center;
           font-size: 3.5rem;
         }
+
+        @include pad {
+          font-size: 3.5rem;
+        }
       }
 
       h3 {
@@ -93,6 +117,11 @@
 
         @include mobile {
           text-align: center;
+          text-transform: uppercase;
+          font-size: 1.6rem;
+        }
+
+        @include pad {
           text-transform: uppercase;
           font-size: 1.6rem;
         }
@@ -152,6 +181,10 @@
         font-size: 2rem;
 
         @include mobile{
+          padding-top: 30px;
+        }
+
+        @include pad{
           padding-top: 30px;
         }
     }
