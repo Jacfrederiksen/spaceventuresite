@@ -17,20 +17,20 @@ const Home = () => {
         </section>
         <section className={styles.buttons_wrapper}>
           <div className={styles.buttons_con}>
-            <Link>
+            <Link to="/trips">
               <div className={styles.planets_con}>
                 <img src="assets/img/moon-btn.jpg" alt="Small image of the moon" />
                 <h6>Månen</h6>
               </div>
             </Link>
-            <Link>
+            <Link to="/trips">
               <div className={styles.planets_con}>
                 <img src="assets/img/mars-btn.jpg" alt="Small image of Mars" />
                 <h6>Mars</h6>
               </div>
             </Link>
             <div className={styles.arrow_con}>
-              <Link>
+              <Link Link to="/trips">
                 <p>Vores ture</p>
               </Link>
               <span>&rarr;</span>

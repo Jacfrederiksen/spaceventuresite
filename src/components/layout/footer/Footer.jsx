@@ -62,28 +62,28 @@ const Footer = () => {
             <ul>
               <div>
               <span className={styles.dot}></span>
-              <Link><li>Rumfærgen</li></Link>
+              <Link to="/shuttle"><li>Rumfærgen</li></Link>
               </div>
               <div>
               <span className={styles.dot}></span>
-              <Link><li>Ture</li></Link>
+              <Link to="/trips"><li>Ture</li></Link>
               </div>
               <div>
               <span className={styles.dot}></span>
-              <Link><li>Vores Team</li></Link>
+              <Link to="/"><li>Vores Team</li></Link>
               </div>
               <div>
               <span className={styles.dot}></span>
-              <Link><li>Galleri</li></Link>
+              <Link to="/gallery"><li>Galleri</li></Link>
               </div>
               <div>
               <span className={styles.dot}></span>
-              <Link><li>Sikkerhed</li></Link>
+              <Link to="/safety"><li>Sikkerhed</li></Link>
               </div>
             </ul>
           </nav>
           <div className={styles.button_con}>
-            <button className={styles.contact_button}>Kontakt</button>
+            <Link to="/contact"><button className={styles.contact_button}>Kontakt</button></Link>
           </div>
           
         </div>

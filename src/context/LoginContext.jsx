@@ -5,7 +5,7 @@ export const LoginContext = createContext();
 const LoginContextProvider = (props) => {
 
     // USER STATE - rummer data hvis en bruger er logget ind
-    const [user, setUser] = useState("admin");
+    const [user, setUser] = useState();
 
     // Login-funktion (matcher brugernavn og password)
     let signIn = (username, password) => {

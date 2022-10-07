@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react'
 import styles from './about.module.scss'
 import parse from 'html-react-parser';
+import { Link } from "react-router-dom";
 
 // Components
 import Loading from './../loading/Loadingcomp'
@@ -38,7 +39,7 @@ const About = () => {
     <div className={styles.about_wrapper}>
       { loading && <Loading /> }
       { error && <Errorcomp />}
-      {about && <div className={styles.about_con}>
+      { about && <div className={styles.about_con}>
         <div className={styles.img_con}>
           <img src="assets/img/om-os.jpg" alt="Picture of earth seen from space" />
         </div>
@@ -48,7 +49,7 @@ const About = () => {
           <div className={styles.hr_con}><hr /><hr /></div>
           <article>{parse(about.content)}</article>
           <div className={styles.button_con}>
-            <button>Kontakt os</button>
+            <Link to="/contact"><button>Kontakt os</button></Link>
           </div>
         </div>
       </div>
